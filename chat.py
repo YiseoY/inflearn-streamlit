@@ -1,14 +1,13 @@
 import streamlit as st
 from dotenv import load_dotenv
 from llm import get_ai_response
-
+load_dotenv() 
 
 st.set_page_config(page_title="개인정보보호법 챗봇", page_icon="🤖")
 
 st.title("개인정보보호법 챗봇 🤖")
 st.caption("개인정보보호법에 대한 질문을 해보세요!")
 
-load_dotenv() 
 
 if 'message_list' not in st.session_state:
     st.session_state.message_list = []
